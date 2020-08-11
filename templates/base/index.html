@@ -1,0 +1,49 @@
+{% extends "base/base.html" %}
+{% load staticfiles %}
+<!-- title -->
+{% block title %} 首页 {% endblock title %}
+{% block content %}
+<link rel="stylesheet" href="http://at.alicdn.com/t/font_1999815_4cqzvk90bmd.css">
+<main class="main" role="main">
+    <div class="content article-list">
+        {% for article in articles %}
+        <article class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+            <!-- 标题 -->
+            <div class="article-header">
+                <h1 itemprop="name">
+                    <a class="article-title" href="/2018/03/28/那些有趣的注释，有没有你曾用过的.html">{{ article.title}}</a>
+                </h1>
+            </div>
+            <!-- 摘要 -->
+            <div class="article-header">
+                <h3 itemprop="name">
+                    <a class="article-title" href="/2018/03/28/那些有趣的注释，有没有你曾用过的.html">{{ article.body|slice:'200'}}...</a>
+                </h3>
+            </div>
+            <!-- 脚注 -->
+            <p class="article-meta">
+                <span class="article-date">
+                    <i class="iconfont icon-rili"></i>
+                    <a href="/2018/03/28/那些有趣的注释，有没有你曾用过的.html" class="article-date">
+                        <time datetime="2018-03-28T12:45:41.000Z" itemprop="datePublished">3月 28</time>
+                    </a>
+                </span>
+                <span class="article-category">
+                    <i class="iconfont icon-Folderfilesarchive"></i>
+                    <a class="article-category-link" href="/categories/开发/">开发</a>
+                </span>
+                <span class="article-tag">
+                    <i class="iconfont icon-tag"></i>
+                    <a class="article-tag-link" href="/tags/程序员/">程序员</a>
+                </span>
+                <span class="post-comment">
+                    <i class="iconfont icon-pinglun"></i>
+                    <a href="/2018/03/28/那些有趣的注释，有没有你曾用过的.html#comments" class="article-comment-link">评论</a>
+                </span>
+                <span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 1,011(字)</span>
+            </p>
+        </article>
+    {% endfor %}
+    </div>
+</main>
+{% endblock content %}

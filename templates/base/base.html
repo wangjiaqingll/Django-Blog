@@ -1,0 +1,45 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <meta charset="utf-8">
+
+        <title>{% block title %}{% endblock %}</title>
+        
+        <link rel="stylesheet" href="/static/css/style.css">
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1.4.0/dist/gitalk.min.css">
+    </head>
+    <body class="main-center">
+        <!-- 导航栏 -->
+        {% include 'header.html'%}
+        {% include 'aside.html' %}
+        <!-- 文章页面位置 -->
+        {% block content %}{% endblock content %}
+        <!-- 脚注 -->
+        {% include 'footer.html' %}
+        <script src="//cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+        <script>
+            window.jQuery || document.write('<script src="static/js/jquery.min.js"><\/script>')
+        </script>
+        <script src="/static/js/plugin.min.js"></script>
+        <script src="/static/js/application.js"></script>
+        <script>
+            !function(T) {
+                var N = {
+                    TRANSLATION: {
+                        POSTS: "文章",
+                        PAGES: "页面",
+                        CATEGORIES: "分类",
+                        TAGS: "标签",
+                        UNTITLED: "(未命名)"
+                    },
+                    ROOT_URL: "/",
+                    CONTENT_URL: "/content.json"
+                };
+                T.INSIGHT_CONFIG = N
+            }(window)
+        </script>
+        <script src="/static/js/insight.js"></script>
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    </body>
+</html>
