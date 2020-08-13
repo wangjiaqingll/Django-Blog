@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="http://at.alicdn.com/t/font_1999815_4cqzvk90bmd.css">
+<link rel="stylesheet" href="http://at.alicdn.com/t/font_1999815_bepr9umexob.css">
 <header class="header" itemscope itemtype="http://schema.org/WPHeader">
     <div class="slimContent">
         <div class="navbar-header">
@@ -49,13 +49,13 @@
         <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
             <ul class="nav navbar-nav main-nav">
                 <li class="menu-item menu-item-home">
-                    <a href="/.">
+                    <a href="{% url 'Blogapp:index' %}">
                         <i class="iconfont icon-zhuye"></i>
                         <span class="menu-title">首页</span>
                     </a>
                 </li>
                 <li class="menu-item menu-item-archives">
-                    <a href="/archives">
+                    <a href="{% url 'Blogapp:article_archives' %}">
                         <i class="iconfont icon-guidang"></i>
                         <span class="menu-title">归档</span>
                     </a>
@@ -76,6 +76,12 @@
                     <a href="/repository">
                         <i class="iconfont icon-xiangmu"></i>
                         <span class="menu-title">项目</span>
+                    </a>
+                </li>
+                <li class="menu-item menu-item-repository">
+                    <a href="{% url 'Blogapp:article_create' %}">
+                        <i class="iconfont icon-tubiaozhizuomoban-"></i>
+                        <span class="menu-title">创作</span>
                     </a>
                 </li>
                 <li class="menu-item menu-item-about">
