@@ -17,13 +17,14 @@
                         <a data-toggle="collapse" href="#collapse2018" aria-expanded="true">
                             <i class="iconfont icon-rili"></i>
                             {{ year.grouper }}
+                            <small class="text-muted">Total {{ year.list | length }} articles</small>
                         </a>
                     </h3>
                 </div>
                 <div id="collapse2018" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading2018">
                     <div class="panel-body">
                         <div class="collection">
-                            {% for article in year.list%}
+                            {% for article in year.list %}
                             <a href="/2018/03/28/那些有趣的注释，有没有你曾用过的.html" class="collection-item" target="_blank" itemprop="url">
                                 <time datetime="2018-03-28T12:45:41.000Z" itemprop="datePublished">{{ article.created|date:'Y-m-d' }}</time>
                                 <span>&nbsp;&nbsp;&nbsp;</span>
