@@ -68,4 +68,6 @@ def article_archive(request):
 
 # 文章分类页视图
 def article_category(request):
-    pass
+    articles = ArticlePost.objects.all()
+    context = {'articles':articles}     
+    return render(request, 'categories/category.html', context)
