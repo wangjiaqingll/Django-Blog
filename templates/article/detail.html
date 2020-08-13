@@ -1,0 +1,68 @@
+{% extends "base/base.html"%}
+{% load staticfiles %}
+{% block title %}
+    文章详情
+{% endblock title %}
+{% block content %}
+<main class="main" role="main">
+    <div class="content">
+        <article class="article article-type-post">
+            <div class="article-header">
+                <h1 class="article-title" itemprop="name">{{ article.title}}</h1>
+                <div class="article-meta">
+                    <span class="article-date">
+                        <i class="iconfont icon-rili"></i>
+                        <a href="" class="article-date">
+                            <time>{{ article.created|date:'Y-m-d' }}</time>
+                        </a>
+                    </span>
+                    <span class="article-category">
+                        <i class="iconfont icon-Folderfilesarchive"></i>
+                        <a class="article-category-link" href="/categories/个人/">{{ article.category.name }}</a>
+                    </span>
+                    <span class="article-tag">
+                        <i class="iconfont icon-tag"></i>
+                        {% for tagname in article.tags.name %}
+                        <a class="article-tag-link" href="/tags/状态/">{{ tagname }}</a>
+                        {% endfor %}
+                    </span>
+                    <span class="article-read hidden-xs">
+                        <i class="iconfont icon-eye" aria-hidden="true"></i>
+                        <span id="busuanzi_container_page_pv">
+                            <span id="busuanzi_value_page_pv">0</span>
+                        </span>
+                    </span>
+                    <span class="post-comment">
+                        <i class="iconfont icon-pinglun"></i>
+                        <a href="" class="article-comment-link">评论</a>
+                    </span>
+                </div>
+            </div>
+            <div class="article-entry marked-body" itemprop="articleBody">
+                <p>{{ article.body|safe }}</p>
+            </div>
+
+        </article>
+        <section id="comments"></section>
+    </div>
+    <nav class="bar bar-footer clearfix" data-stick-bottom>
+
+        <div class="bar-inner">
+            <ul class="pager pull-left">
+                <li class="prev">
+                    <a href="/2018/03/28/那些有趣的注释，有没有你曾用过的.html" title="那些有趣的注释，有没有你曾用过的">
+                        <i class="iconfont icon-shangyiye" aria-hidden="true"></i>
+                        <span>&nbsp;&nbsp;上一篇</span>
+                    </a>
+                </li>
+                <li class="next">
+                    <a href="/2017/12/17/visual-studio-code-personal-use-plug-in-colation.html" title="Visual Studio Code个人使用插件整理">
+                        <span>下一篇&nbsp;&nbsp;</span>
+                        <i class="iconfont icon-next" aria-hidden="true"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</main>
+{% endblock content %}
