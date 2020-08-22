@@ -71,3 +71,21 @@ def article_category(request):
     articles = ArticlePost.objects.all()
     context = {'articles':articles}     
     return render(request, 'categories/category.html', context)
+
+# 文章标签页视图
+def article_tags(request):
+    articles = ArticlePost.objects.all()
+    context = {'articles':articles}     
+    return render(request, 'tags/tags.html', context)
+
+# github仓库
+def repository(request):   
+    return render(request, 'repository/repository.html')
+
+# about界面 
+def about(request):        
+    return render(request, 'about/about.html')
+
+# uestc
+def fleeuestc(request):
+    return render(request, 'uestc/index.html')

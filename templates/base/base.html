@@ -13,12 +13,13 @@
     </head>
     <body class="main-center">
         <!-- 导航栏 -->
-        {% include 'header.html'%}
-        {% include 'aside.html' %}
+        {% include 'base/header.html'%}
         <!-- 文章页面位置 -->
-        {% block content %}{% endblock content %}
+        {% block content %}
+        {% endblock content %}
+        {% include 'base/aside.html' %}
         <!-- 脚注 -->
-        {% include 'footer.html' %}
+        {% include 'base/footer.html' %}
         <script src="//cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
         <script>
             window.jQuery || document.write('<script src="static/js/jquery.min.js"><\/script>')
