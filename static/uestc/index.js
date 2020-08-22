@@ -29,20 +29,20 @@ function disableElement() {
     function radiochange(e) {
     
     }
-    /*
+    
     $('input[type=radio][name=io]').change(function () {
     console.log("radiochange");
     console.log("radiochange"+$("input[name='io']:checked").val());
     if($("input[name='io']:checked").val() == 0){
     console.log($("input[name='io']:checked").val());
-    document.getElementById("auth").innerHTML="研究生用户，出校授权有效！";
+    document.getElementById("auth").innerHTML="本科用户，出校登记成功！";
     }
     else{
     console.log($("input[name='io']:checked").val());
-    document.getElementById("auth").innerHTML="研究生用户，入校授权有效！";
+    document.getElementById("auth").innerHTML="本科用户，入校登记成功！";
     }
     })
-    */
+    
     
     
     

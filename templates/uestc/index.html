@@ -21,21 +21,18 @@
       <div>
         <div class="info">
           <div class="custom-name">
-            <label>我是谁</label>
-            <input type="text" oninput="namechange()" id="custom-name-input" class="custom-name-input"></input>
+            
+            <input type="text" oninput="namechange()" id="custom-name-input" class="custom-name-input" placeholder="输入你的名字"/></input>
           </div>
-          
-          <!--<div class="io">-->
-          <!--  <td>-->
-
-          <!--    <input name="io" value="1" type="radio" οnclick="radiochange()">-->
-          <!--    <label>我从哪里来</label><br>-->
-          <!--    <input name="io" value="0" type="radio" οnclick="radiochange()">-->
-          <!--    <label for="sex">我要到哪里去</label><br>-->
-
-          <!--  </td>-->
-          <!--</div>-->
-
+        
+        <div class="io">
+        <td>
+        <input name="io" value="1" type="radio" οnclick="radiochange()">
+        <label>进校选项</label><br>
+        <input name="io" value="0" type="radio" οnclick="radiochange()">
+        <label for="sex">出校选项</label>
+        </td>
+        </div>
           <button id="infoselected">确认</button>
         </div>
       </div>
@@ -62,7 +59,7 @@
                 <div class="user-left">用户姓名</div>
               </div>
               <div class="td-right">
-                <div id="user-right" class="user-right">UESTCer</div>
+                <div id="user-right" class="user-right">UESTC</div>
               </div>
             </div>
             <div class="tr">
@@ -75,7 +72,7 @@
                 <div class="register-left">登记类型</div>
               </div>
               <div class="td-right">
-                <div class="register-right">研究生（硕士）</div>
+                <div class="register-right">本科生 </div>
               </div>
             </div>
             <div class="tr">
@@ -87,6 +84,8 @@
               <div class="td-mid">
                 <div class="time-left">登记时间</div>
               </div>
+
+            
               <!-- <div class="td-right"><div class="time-right">{{text}}</div></div> -->
               <div class="td-right">
                 <!-- <div class="scrolltxt">
@@ -100,9 +99,14 @@
                 </div> -->
                 <marquee>
                   <div id="time" style="font-weight: bolder;font-size: 20px;color: #09B094;" behavior="scroll">
-                    蒙多想去哪儿就去哪儿！</div>
+                    悄悄咪咪用，暴露了爸爸也帮不了你！</div>
                 </marquee>
               </div>
+            </div>
+            <div style="text-align:center" >
+                <button class="button">
+                    前往个人二维码
+                </button>
             </div>
           </block>
         </div>
@@ -222,7 +226,7 @@
 
   .register-right {
     font-family: "黑体";
-    color: orange;
+    color: #000;
     font-size: 25px;
     align-items: right;
     font-weight: 900;
@@ -312,6 +316,21 @@
     height: 90rpx;
     line-height: 90rpx;
   }
+
+  .button {
+    background-color: #09B094; /* Green */
+    border: none;
+    color: white;
+    padding: 8px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
 </style>
 
 </html>
