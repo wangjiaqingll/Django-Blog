@@ -6,11 +6,11 @@ function disableElement() {
     console.log("test");
     }
     var data = {
-    marqueePace: 1,//滚动速度
+    marqueePace: 5,//滚动速度
     marqueeDistance: 0,//初始滚动距离
-    marquee_margin: 20,
+    marquee_margin: 10,
     size:14,
-    interval: 40, // 时间间隔
+    interval: 20, // 时间间隔
     
     infoSelected: false,
     text: '我想什么时候出就出，想什么时候回就回，你管不着，Hhhh!',
@@ -35,11 +35,11 @@ function disableElement() {
     console.log("radiochange"+$("input[name='io']:checked").val());
     if($("input[name='io']:checked").val() == 0){
     console.log($("input[name='io']:checked").val());
-    document.getElementById("auth").innerHTML="本科用户，出校登记成功！";
+    document.getElementById("auth").innerHTML="研究生用户，出校登记成功！";
     }
     else{
     console.log($("input[name='io']:checked").val());
-    document.getElementById("auth").innerHTML="本科用户，入校登记成功！";
+    document.getElementById("auth").innerHTML="研究生用户，入校授权有效！";
     }
     })
     

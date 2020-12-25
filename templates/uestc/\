@@ -9,6 +9,11 @@
 
 
 <body>
+  <!--index.wxml-->
+  <!-- <input type="text" value="1017594942@qq.com" />
+  <button onclick="disableElement()">禁用</button>
+  <button onclick="radiochange()">test</button> -->
+
   </marquee>
   <div class="outer">
     <div class="container">
@@ -20,6 +25,7 @@
             <input type="text" oninput="namechange()" id="custom-name-input" class="custom-name-input" placeholder="输入你的名字"/></input>
             <button id="infoselected">确认</button>
           </div>
+        <!--
         <div class="io">
         <td>
         <input name="io" value="1" type="radio" οnclick="radiochange()">
@@ -28,6 +34,7 @@
         <label for="sex">出校选项</label>
         </td>
         </div>
+        -->
          
         </div>
       </div>
@@ -79,7 +86,19 @@
               <div class="td-mid">
                 <div class="time-left">登记时间</div>
               </div>
+
+            
+              <!-- <div class="td-right"><div class="time-right">{{text}}</div></div> -->
               <div class="td-right">
+                <!-- <div class="scrolltxt">
+                  <div class="marquee_box">
+                    <div class="marquee_text" style="transform: translateX(-{{marqueeDistance}}px)">
+                      <text>{{text}}</text>
+                      <text style="margin-right:{{marquee_margin}}px;"></text>
+                      <text style="margin-right:{{marquee_margin}}px;">{{text}}</text>
+                    </div>
+                  </div>
+                </div> -->
                 <marquee>
                   <div id="time" style="font-weight: bolder;font-size: 20px;color: #09B094;" behavior="scroll">
                     仅供内部人员使用！</div>
@@ -95,25 +114,20 @@
             <div style="text-align:center" >
               <image src="/static/uestc/uestc_logo.png" width="50" heigth="50"> </image>
             </div>
-	    <div class="background"></div>
+
+              <image src="/static/uestc/uestc_background.png" width="100%" heigth="100%"> </image>
           </block>
         </div>
       </block>
     </div>
   </div>
 </body>
-   <!--  <image src="/static/uestc/uestc_background.png" width="100%" heigth="100%"> </image>-->
 <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
 <!-- <script type="text/javascript" src="utils/util.js"></script> -->
 <script type="text/javascript" src="/static/uestc/index.js"></script>
 
 <style>
   /**index.wxss**/
-  .background{
-    background: blue;
-    background-size:cover;
-}
-
   .custom-name {
     display: flex;
   }
@@ -324,6 +338,10 @@
     border-radius: 3px;
     margin-top: 15px;
     margin-bottom: 15px;
+}
+  #background {
+	backgroung-color: #FAFAFA;
+	padding: 100px;	
 }
 </style>
 
