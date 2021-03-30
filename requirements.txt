@@ -19,7 +19,7 @@ mccabe==0.6.1
 mistune==0.8.4
 odfpy==1.4.1
 openpyxl==3.0.4
-Pygments==2.6.1
+Pygments==2.7.4
 pylint==2.5.3
 PyMySQL==0.10.0
 pytz==2020.1
