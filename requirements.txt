@@ -2,7 +2,7 @@ asgiref==3.2.10
 astroid==2.4.2
 defusedxml==0.6.0
 diff-match-patch==20200713
-Django==2.1.7
+Django==2.2.24
 django-import-export==2.3.0
 django-mdeditor==0.1.18
 django-pure-pagination==0.3.0
